@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
-import PortfolioContext from "../pages/portfoliocontext";
+import {useProjects } from "../Context/PortfolioContext";
 
 export default function Admin() {
-  const { projects, setProjects, techSkills, setTechSkills } = useContext(PortfolioContext);
+  const { projects, setProjects, techSkills, setTechSkills } = useProjects();
   const [loggedIn, setLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
