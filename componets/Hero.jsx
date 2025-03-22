@@ -1,4 +1,3 @@
-
 export default function Hero() {
   const projects = [
     {
@@ -41,13 +40,13 @@ export default function Hero() {
         </div>
 
         <div className="col-span-5 flex justify-center sm:justify-end">
-          <div className="rounded-full bg-white w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full bg-white w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden flex items-center justify-center">
             <img
               src="/hero-img.png"
               alt="Hero image of Mohamed Bulhan"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/4 left-1/4"
-              width={300}
-              height={300}
+              className="w-full h-full object-cover"
+              width={400}
+              height={400}
               priority
             />
           </div>
@@ -62,10 +61,15 @@ export default function Hero() {
           </div>
         </div>
 
-        <h2 className="text-3xl font-semibold text-center mb-12">My Projects</h2>
+        <h2 className="text-3xl font-semibold text-center mb-12">
+          My Projects
+        </h2>
         <div className="flex justify-center gap-8 flex-wrap">
           {projects.map((project) => (
-            <div key={project.id} className="card bg-white shadow-lg rounded-lg w-80">
+            <div
+              key={project.id}
+              className="card bg-white shadow-lg rounded-lg w-80"
+            >
               <img
                 src={project.img}
                 alt={`Preview of ${project.title} project`}
